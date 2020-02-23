@@ -1,14 +1,14 @@
 
 # GBxQT
- Custom software for InsideGadget's GBx devices
+ Custom software for InsideGadget's GBx devices forked from [HDR](https://github.com/HDR).
+ 
+ The aim of this fork is testing and learning Qt
  
 ## Compiling
 
 ### Windows
-1. Install [QT](https://www.qt.io/download-open-source)
-2. Install [mingw-w64](http://mingw-w64.org/)
-3. Run `qmake.exe GBxQT.pro -spec win32-g++ "CONFIG+=qtquickcompiler"`
-4. Run mingw32-make
+1. Install newest version of [Qt](https://www.qt.io/download-open-source) - (this includes wingw and wingw 64-bit)
+2. Use Qt Creator to test or run the software.
 
 ### Linux
 1. Install qt using your distro's package manager (apt install qt5-default if your distro uses apt)
