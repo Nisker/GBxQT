@@ -70,9 +70,9 @@ Settings::Settings (QWidget * parent):QGroupBox (tr ("Settings"), parent)
   fct_combo = new QComboBox (this);
   combo_boxes->addWidget (fct_combo);
   fct_combo->insertItem(0, "iG 32KB Cart");
-  fct_combo->insertItem(1, "iG 2MB 128KB SRAM Cart"); //by removing " Cart" it makes the UI move less.
-  fct_combo->insertItem(2, "iG 2MB 32KB FRAM Cart");
-  fct_combo->insertItem(3, "iG 4MB 128KB SRAM Cart");
+  fct_combo->insertItem(1, "iG 2MB 128KB SRAM"); //by removing " Cart" it makes the UI move less.
+  fct_combo->insertItem(2, "iG 2MB 32KB FRAM");
+  fct_combo->insertItem(3, "iG 4MB 128KB SRAM");
   fct_combo->insertItem(4, "32KB AM29F010B");
   fct_combo->insertItem(5, "32KB SST39SF010A");
   fct_combo->insertItem(6, "32KB AT49F040");
@@ -274,11 +274,11 @@ Settings::gbToggled ()
         for (int i = roms_combo->count() - 1; i >= 0; i--)
           roms_combo->removeItem (i);
 
-        roms_combo->insertItem (0, " 32KByte");
-        roms_combo->insertItem (1, " 64KByte");
-        roms_combo->insertItem (2, " 128KByte");
-        roms_combo->insertItem (3, " 256KByte");
-        roms_combo->insertItem (4, " 512KByte");
+        roms_combo->insertItem (0, "32KByte");
+        roms_combo->insertItem (1, "64KByte");
+        roms_combo->insertItem (2, "128KByte");
+        roms_combo->insertItem (3, "256KByte");
+        roms_combo->insertItem (4, "512KByte");
         roms_combo->insertItem (5, "1 MByte");
         roms_combo->insertItem (6, "2 MByte");
         roms_combo->insertItem (7, "4 MByte");
