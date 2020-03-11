@@ -1,6 +1,6 @@
 
 # GBxQT
- Custom software for InsideGadget's GBx devices forked from [HDR](https://github.com/HDR).
+ Custom software for [InsideGadget's](https://github.com/insidegadgets/GBxCart-RW) GBx devices forked from [HDR](https://github.com/HDR).
  
  The aim of this fork is testing and learning Qt
  
