@@ -433,7 +433,7 @@ void Gui::com_read_cont(void) {
 uint8_t Gui::com_test_port(void) {
     // Check if COM port responds correctly
     if (RS232_OpenComport(cport_nr, bdrate, "8N1") == 0) { // Port opened
-        //delay_ms(1500); //My Arduino nano as a test device needs the delay. 
+        //delay_ms(1500); //My Arduino nano as a test device needs the delay.
 		set_mode('0');
         uint8_t cartridgeMode = request_value(CART_MODE);
 
@@ -1797,7 +1797,7 @@ void Gui::gba_specify_ram_size(int memoryType, int flashType, int size) {
 void Gui::read_ram(){
     if(settings->GB_check->checkState() == Qt::Checked){
         read_gb_header();
-        file_name = QFileDialog::getSaveFileName (this, tr ("Write Save to"), gameTitle, tr ("GB/GBC Save (*.sav)"));
+        file_name = QFileDialog::getSaveFileName (this, tr ("Write Save to"), gameTitle, tr ("GB/GBC Save (*.sav);; Emulator save (*.srm)"));
         if (file_name != ""){
             thread_RRAM->filename = file_name;
             thread_RRAM->cMode = 1;
@@ -1808,7 +1808,7 @@ void Gui::read_ram(){
     }
 
     if(settings->GBA_check->checkState() == Qt::Checked){
-        file_name = QFileDialog::getSaveFileName (this, tr ("Write Save to"), gameTitle, tr ("GBA Save (*.sav)"));
+        file_name = QFileDialog::getSaveFileName (this, tr ("Write Save to"), gameTitle, tr ("GBA Save (*.sav);; Emulator save (*.srm)"));
         if (file_name != ""){
             gba_specify_ram_size(mType, 2, cSize);
             thread_RRAM->filename = file_name;
